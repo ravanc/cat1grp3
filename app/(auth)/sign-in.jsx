@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Alert, View, AppState, Image, Text, TextInput, SafeAreaView } from 'react-native'
 import { supabase } from '../../lib/supabase'
-import { Link } from 'expo-router'
+import { Link, router } from 'expo-router'
 
 import CustomButton from '../../components/generic/CustomButton'
 
@@ -30,7 +30,7 @@ const Auth = () => {
       password: password,
     })
 
-    if (error) Alert.alert(error.message)
+    if (error) {Alert.alert(error.message)} else {router.replace('/home')}
     setLoading(false)
   }
 

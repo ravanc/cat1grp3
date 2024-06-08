@@ -1,10 +1,11 @@
-import { View, Text } from 'react-native'
+import { View, Text, Button } from 'react-native'
 import React from 'react'
+import { supabase } from '../../lib/supabase'
 
 const Home = () => {
   return (
     <View>
-      <Text>Home</Text>
+      <Text>Hello Home</Text>
     </View>
   )
 }
