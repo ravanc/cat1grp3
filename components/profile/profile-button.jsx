@@ -7,7 +7,9 @@ const ProfileButton = ({ source, route }) => {
     <TouchableHighlight
       activeOpacity={0.8}
       underlayColor={'#EEEEEE'}
-      onPress={()=> {}}
+      onPress={()=> {
+        router.replace(route)
+      }}
       className='rounded-lg'
     >
       <Image source={source} />

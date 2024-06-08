@@ -34,7 +34,7 @@ const Profile = () => {
           </CircularProgressBase>
         </View>
 
-        <Text className='text-lg mt-6'>400 MORE TO <Text className='font-bold'>SAPLING</Text></Text>
+        <Text className='text-lg mt-6 font-pregular'>400 MORE TO <Text className='font-psemibold'>SAPLING</Text></Text>
         
         <Text className='text-xs text-[#979797]'>*tonnes of carbon dioxide saved</Text>
 
@@ -47,6 +47,7 @@ const Profile = () => {
           />
           <ProfileButton
             source={require('../../assets/images/profile/logout.png')}
+            route='../(auth)/sign-in'
           />
         </View>
       </View>
