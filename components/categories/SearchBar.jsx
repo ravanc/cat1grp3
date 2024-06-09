@@ -3,7 +3,7 @@ import React from 'react'
 
 const SearchBar = () => {
   return (
-    <View className='flex-none items-center'>
+    <View className='flex-none items-center mb-4'>
       <View className='flex-row items-center bg-[#F0F0F0] h-[32px] w-[86vw] rounded-xl'>
         <Image source={require('../../assets/images/home/search.png')} className='mx-2' />
         <TextInput className='w-full text-[14px]'/>
