@@ -1,6 +1,6 @@
-import { View, Text, Button, SafeAreaView, TouchableOpacity } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { supabase } from '../../lib/supabase';
+import { router } from 'expo-router';
 
 import HomeHeader  from '../../components/home/home-header';
 import Carousel from '../../components/home/carousel';
@@ -9,16 +9,24 @@ import ProductsList from '../../components/home/products';
 
 const Home = () => {
   return (
-    <SafeAreaView className='h-full'>
+    <SafeAreaView className='h-full bg-white'>
       <HomeHeader/>
-      <RankCard/>
-      <Carousel/>
+      <TouchableOpacity
+        className='mt-4 self-center rounded-xl'
+        activeOpacity={0.9}
+        onPress={() => {router.push('/profile')}}
+      >
+        <RankCard/>
+      </TouchableOpacity>
+      <View className='mt-6'>
+        <Carousel/>
+      </View>
       <View className='flex-row ml-7 mt-8'>
         <Text className='font-psemibold text-lg'>Popular</Text>
         <TouchableOpacity className='ml-auto mr-5 bg-primary rounded-full w-[60px] justify-center'>
           <Text 
             className='font-pregular text-xs text-center text-white'
-            onPress={console.log("navigate to categories")} 
+            onPress={() => { router.push('/categories') }} 
           >See All</Text>
         </TouchableOpacity>
       </View>
