@@ -1,6 +1,7 @@
 import { View, Text, Image, TouchableOpacity, TouchableHighlight } from 'react-native'
 import React from 'react'
 import ProgressBar from './progress-bar'
+import { router } from 'expo-router'
 
 const HomeHeader = () => {
   return (
@@ -15,14 +16,13 @@ const HomeHeader = () => {
         <TouchableHighlight
             activeOpacity={0.8}
             underlayColor={'#BBBBBB'}
-            onPress={() => {}}
+            onPress={() => { router.push('./../search-page/page') }}
             style={{borderRadius: 50, width: '16px'}}
             >
             <View className='flex-none justify-center items-center'>
                 <View className='rounded-full bg-[#E4FFE6] w-[32px] h-[32px]' />
                 <Image source={require('../../assets/images/home/search.png')} className='absolute' />
             </View>
-            
         </TouchableHighlight>
         <TouchableHighlight
             activeOpacity={0.8}
@@ -37,8 +37,6 @@ const HomeHeader = () => {
             
         </TouchableHighlight>
       </View>
-      
-      
     </View>
   )
 }
