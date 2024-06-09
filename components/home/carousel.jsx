@@ -39,18 +39,18 @@ const Carousel = () => {
   // render images & text
   const renderItem = ({ item, index }) => {
     return (
-      <View className='mt-3' style={{ width: screenWidth}}>
-        <View className='flex items-start ml-10 drop-shadow-2xl rounded-lg overflow-hidden' style={{width: Dimensions.get('screen').width*0.8}}>
-          <Image source={item.image} className='object-contain'/>
+      // Could be simplified to w-full
+      <View className='mt-3' style={{ width: screenWidth}}> 
+        <View className='flex items-start ml-10 rounded-2xl overflow-hidden border-[1px] border-[#BBBBBB]' style={{width: Dimensions.get('screen').width*0.8}}>
+          <Image source={item.image} className='w-[100%]' resizeMode='cover'/>
           <View className='flex-row items-center w-full bg-white'>
             <Text className='font-pregular text-s p-2'>{item.description}</Text>
-            <View className='flex-row ml-auto mr-2 justify-end'>
-              <Image source={require('../../assets/images/general/leaf-green.png')} />
-              <Image source={require('../../assets/images/general/leaf-green.png')} />
-              <Image source={require('../../assets/images/general/leaf-green.png')} />
-              <Image source={require('../../assets/images/general/leaf-grey.png')} />
-              <Image source={require('../../assets/images/general/leaf-grey.png')} />
-
+            <View className='flex-row gap-1 ml-auto mr-2'>
+              <Image source={require('../../assets/images/general/leaf-green.png')} className='w-[13px] h-[13px]' />
+              <Image source={require('../../assets/images/general/leaf-green.png')} className='w-[13px] h-[13px]'/>
+              <Image source={require('../../assets/images/general/leaf-green.png')} className='w-[13px] h-[13px]'/>
+              <Image source={require('../../assets/images/general/leaf-grey.png')} className='w-[13px] h-[13px]'/>
+              <Image source={require('../../assets/images/general/leaf-grey.png')} className='w-[13px] h-[13px]'/>
             </View>
           </View>
         </View>
@@ -65,6 +65,7 @@ const Carousel = () => {
         if (activeIndex == index) {
           return (
             <View
+              key={index}
               className='bg-[#49824E] h-[10px] w-[10px] rounded-full'
             >
             </View>
