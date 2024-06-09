@@ -8,6 +8,7 @@ module.exports = {
         secondary: "#F4FDF5",
         black: "#000000",
         white: "#FFFFFF",
+        grey: "#F4F5F5",
       },
       fontFamily: {
         plight: ["Poppins-Light", "sans-serif"],
