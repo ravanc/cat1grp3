@@ -11,7 +11,7 @@ const ProfileHeader = ({ avatarSource, name }) => {
           activeOpacity={0.8}
           underlayColor={'#BBBBBB'}
           onPress={() => {}}
-          style={{borderRadius: '50%', width: '16px'}}
+          style={{borderRadius: 50, width: '16px'}}
         >
           <View className='flex-none justify-center items-center'>
             <View className='rounded-full bg-[#E4FFE6] w-[32px] h-[32px]' />
@@ -23,7 +23,7 @@ const ProfileHeader = ({ avatarSource, name }) => {
           activeOpacity={0.8}
           underlayColor={'#BBBBBB'}
           onPress={() => {}}
-          style={{borderRadius: '50%', width: '16px'}}
+          style={{borderRadius: 50, width: '16px'}}
         >
           <View className='flex-none justify-center items-center'>
           <View className='rounded-full bg-[#E4FFE6] w-[32px] h-[32px]' />

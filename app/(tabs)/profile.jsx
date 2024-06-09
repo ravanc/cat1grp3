@@ -22,7 +22,7 @@ const Profile = () => {
 
         <View className='mt-4'>
           <CircularProgressBase 
-            value={50} 
+            value={40} 
             radius={150} 
             activeStrokeWidth={20} 
             inActiveStrokeWidth={20} 
