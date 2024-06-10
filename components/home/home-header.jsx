@@ -27,7 +27,7 @@ const HomeHeader = () => {
         <TouchableHighlight
             activeOpacity={0.8}
             underlayColor={'#BBBBBB'}
-            onPress={() => {}}
+            onPress={() => { router.push('./../cart/cart') }}
             style={{borderRadius: 50, width: '16px'}}
             >
             <View className='flex-none justify-center items-center'>
