@@ -1,42 +1,23 @@
 import { View, Text, SafeAreaView, ScrollView, TouchableHighlight, Image } from 'react-native'
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { router } from 'expo-router'
 
 import Listing from '../../components/generic/Listing'
 import CategoryList from '../../components/categories/CategoryList'
-
-const CATEGORIES = [
-  {
-      id: 'food',
-      source: require('../../assets/images/categories/food.png'),
-      name: 'Food',
-  },
-  {
-      id: 'mensFashion',
-      source: require('../../assets/images/categories/men-fashion.png'),
-      name: 'Men\'s Fashion',
-  },
-  {
-      id: 'womensFashion',
-      source: require('../../assets/images/categories/women-fashion.png'),
-      name: 'Women\'s Fashion',
-  },
-  {
-      id: 'kids',
-      source: require('../../assets/images/categories/kids.png'),
-      name: 'Kids',
-  },
-  {
-      id: 'homeAppliances',
-      source: require('../../assets/images/categories/home-appliances.png'),
-      name: 'Home Appliances',
-  },
-]
+import CustomButton from '../../components/generic/CustomButton'
+import CATEGORIES from '../../constants/categories'
+import { searchByCategory } from '../../lib/services'
 
 const Categories = () => {
+  const [categorySelected, setCategorySelected] = useState('food');
+  const [sortBy, setSortBy] = useState('ecoRating');
+  const [listings, setListings] = useState([]);
 
-  const [isSelected, setIsSelected] = useState('food');
+  useEffect(() => {
+    setListings(searchByCategory(categorySelected));
+  }, [categorySelected])
+
 
   return (
     <SafeAreaView className='bg-white h-full w-full'>
@@ -56,51 +37,46 @@ const Categories = () => {
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View className='border-b-[1px] border-[#BBBBBB] py-2'>
-          <CategoryList categories={CATEGORIES} isSelected={isSelected} setIsSelected={setIsSelected}/>
+          <CategoryList categories={CATEGORIES} isSelected={categorySelected} setIsSelected={setCategorySelected}/>
         </View>
-        <View className='flex-none items-center'>
-          <View className='flex-row flex-wrap justify-start w-[85vw]'>
-            <Text className='font-psemibold w-full text-center text-xl mt-2'>{(CATEGORIES.find((category) => category.id == isSelected)).name}</Text>
-            <View className='flex-none items-center w-[50%]'>
+
+        <View>
+          <Text className='font-psemibold text-2xl mt-3 ml-4'>{(CATEGORIES.find((category) => category.id == categorySelected)).name}</Text>
+          <View className='flex-row w-full items-center mt-1'>
+            <Text className='text-[16px] font-pregular ml-4'>Sort by:</Text>
+            <CustomButton 
+              text={'Eco-Rating'} 
+              containerStyle={`h-8 w-24 rounded-lg ml-2 ${(sortBy == 'ecoRating') ? 'bg-primary' : 'bg-secondary border-[1px] border-[#999999]'}`} 
+              textStyle={`font-pregular ${(sortBy == 'ecoRating') ? 'text-white' : 'text-black'}`} 
+              handlePress={() => {
+                setSortBy('ecoRating')
+                setListings(listings.sort((itemA, itemB) => (itemB.ecoRating - itemA.ecoRating)))
+                }}
+                />
+            <CustomButton 
+              text={'User Rating'} 
+              containerStyle={`h-8 w-24 rounded-lg ml-2 ${(sortBy == 'userRating') ? 'bg-primary' : 'bg-secondary border-[1px] border-[#999999]'}`} 
+              textStyle={`font-pregular ${(sortBy == 'userRating') ? 'text-white' : 'text-black'}`} 
+              handlePress={() => {
+                setSortBy('userRating')
+                setListings(listings.sort((itemA, itemB) => (itemB.userRating - itemA.userRating)))
+              }}
+            />
+          </View>
+
+
+          <View className='flex-row flex-wrap justify-start mt-4 self-center'>
+            {listings.map((item) => 
               <Listing 
-                source={require('../../assets/images/home/product.png')} 
-                productName={'Blouse'} 
-                merchantName={'Not SHEIN'} 
-                ecoRating={'5.0'} 
-                userRating={'5.0'}
-                styles={'mt-3'}
-              />
-            </View>
-            <View className='flex-none items-center w-[50%]'>
-              <Listing 
-                source={require('../../assets/images/home/product.png')} 
-                productName={'Blouse'} 
-                merchantName={'Not SHEIN'} 
-                ecoRating={'5.0'} 
-                userRating={'5.0'}
-                styles={'mt-3'}
-              />
-            </View>
-            <View className='flex-none items-center w-[50%]'>
-              <Listing 
-                source={require('../../assets/images/home/product.png')} 
-                productName={'Blouse'} 
-                merchantName={'Not SHEIN'} 
-                ecoRating={'5.0'} 
-                userRating={'5.0'}
-                styles={'mt-3'}
-              />
-            </View>
-            <View className='flex-none items-center w-[50%]'>
-              <Listing 
-                source={require('../../assets/images/home/product.png')} 
-                productName={'Blouse'} 
-                merchantName={'Not SHEIN'} 
-                ecoRating={'5.0'} 
-                userRating={'5.0'}
-                styles={'mt-3'}
-              />
-            </View>
+                source={item.imageSource}
+                productName={item.productName}
+                merchantName={item.merchantName}
+                ecoRating={item.ecoRating}
+                userRating={item.userRating}
+                key={item.productId}
+                styles={'ml-12 mb-4'}
+              />)
+            }
           </View>
         </View>
       </ScrollView>

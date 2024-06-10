@@ -31,6 +31,7 @@ export default function RootLayout() {
         <Stack.Screen name="search-page/page" options={{ headerShown: false }} />
         <Stack.Screen name="results/[query]" options={{ headerShown: false }} />
         <Stack.Screen name="cart/cart" options={{ headerShown: false }} />
+        <Stack.Screen name="product/[product]" options={{ headerShown: false }} />
       </Stack>
   );
 }

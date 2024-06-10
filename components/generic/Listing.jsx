@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { router } from 'expo-router';
 
 const Listing = ({source, productName, merchantName, ecoRating, userRating, styles}) => {
 
@@ -9,11 +10,11 @@ const Listing = ({source, productName, merchantName, ecoRating, userRating, styl
   return (
     <View className={`w-[145px] h-[175px] ${styles}`}>
         <TouchableOpacity
-          onPress={() => {}}
+          onPress={() => { router.push(`/product/${productName}`) }}
           activeOpacity={0.9}
         >
           <View>
-            <Image source={source} className='rounded-2xl'/>
+            <Image source={source} className='rounded-2xl h-[130px] w-[145px] border-[.5px] border-[#AAAAAA]' resizeMode='cover'/>
             <View className='w-[16px] h-[16px] absolute right-4 bottom-3'>
               <TouchableOpacity 
               onPress={() => { setIsLiked(!isLiked)}}
@@ -23,15 +24,18 @@ const Listing = ({source, productName, merchantName, ecoRating, userRating, styl
               </TouchableOpacity>
             </View>
           </View>
-          <Text className='mt-[2px] font-pregular'>{productName}</Text>
+          <Text 
+            className='mt-[2px] font-pregular text-ellipsis overflow-hidden'
+            numberOfLines={1}
+          >{productName}</Text>
           <View className='flex-row items-center'>
-          <Text className='font-plight'>{merchantName}</Text>
-          <View className='ml-auto flex-row items-center'>
-            <Image source={require('../../assets/images/general/leaf-green.png')} className='h-[10px] w-[10px] mr-[2px]' />
-            <Text className='font-plight mr-[2px]'>{ecoRating}</Text>
-            <Image source={require('../../assets/images/general/star-yellow.png')} className='h-[12px] w-[12px] mr-[2px]'/>
-            <Text className='font-plight'>{userRating}</Text>
-          </View>
+            <Text className='font-plight w-[78px]' numberOfLines={1}>{merchantName}</Text>
+            <View className='ml-auto flex-row items-center'>
+              <Image source={require('../../assets/images/general/leaf-green.png')} className='h-[10px] w-[10px] mr-[2px]' />
+              <Text className='font-plight mr-[2px]'>{ecoRating}</Text>
+              <Image source={require('../../assets/images/general/star-yellow.png')} className='h-[12px] w-[12px] mr-[2px]'/>
+              <Text className='font-plight'>{userRating}</Text>
+            </View>
           </View>
         </TouchableOpacity>
     </View>
