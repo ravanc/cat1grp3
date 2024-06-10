@@ -1,10 +1,10 @@
-import { View, Text, SafeAreaView, ScrollView } from 'react-native'
+import { View, Text, SafeAreaView, ScrollView, TouchableHighlight, Image } from 'react-native'
 import React from 'react'
 import { useState } from 'react'
+import { router } from 'expo-router'
 
 import Listing from '../../components/generic/Listing'
 import CategoryList from '../../components/categories/CategoryList'
-import SearchBar from '../../components/categories/SearchBar'
 
 const CATEGORIES = [
   {
@@ -40,9 +40,22 @@ const Categories = () => {
 
   return (
     <SafeAreaView className='bg-white h-full w-full'>
-      <SearchBar />
+      <View className='flex-row items-center py-4 border-b-[1px] border-[#BBBBBB]'>
+        <Text className='font-psemibold text-xl ml-5'>Categories</Text>
+        <TouchableHighlight
+          activeOpacity={0.8}
+          underlayColor={'#BBBBBB'}
+          onPress={() => { router.push('./../search-page/page') }}
+          className='rounded-full w-[16px] ml-auto mr-6'
+        >
+          <View className='flex-none justify-center items-center'>
+              <View className='rounded-full bg-[#E4FFE6] w-[32px] h-[32px]' />
+              <Image source={require('../../assets/images/home/search.png')} className='absolute' />
+          </View>
+        </TouchableHighlight>
+      </View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View className='border-b-[1px] border-[#BBBBBB] py-2 mt-3'>
+        <View className='border-b-[1px] border-[#BBBBBB] py-2'>
           <CategoryList categories={CATEGORIES} isSelected={isSelected} setIsSelected={setIsSelected}/>
         </View>
         <View className='flex-none items-center'>

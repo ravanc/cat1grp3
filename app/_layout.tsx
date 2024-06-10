@@ -28,6 +28,9 @@ export default function RootLayout() {
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="search-page/page" options={{ headerShown: false }} />
+        <Stack.Screen name="results/[query]" options={{ headerShown: false }} />
+        <Stack.Screen name="cart/cart" options={{ headerShown: false }} />
       </Stack>
   );
 }
