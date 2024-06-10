@@ -20,15 +20,14 @@ const App = () => {
         />
       </View>
       <Text className='color-white mt-[36px] text-lg'>Shop sustainably with EcoPick</Text>
-      {/* <View className=""> */}
-        {/* <Link href="/(tabs)/home" className="text-center bg-[#49824E] w-[256px] h-[36px] mt-[36px] rounded-lg text-lg color-white">Start</Link> */}
-      {/* </View> */}
       <CustomButton 
         text="Start"
         containerStyle="w-[256px] h-[42px] mt-[36px] rounded-lg"
         textStyle="text-lg"
+        //// uncomment below to enable auth page
         // handlePress={() => router.push('/(auth)/sign-in')}
-        handlePress={() => router.push('/home')}
+        // comment below to enable auth page
+        handlePress={() => router.push('/(auth)/home')}
       />
     </ImageBackground>
   )
