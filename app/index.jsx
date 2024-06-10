@@ -27,7 +27,7 @@ const App = () => {
         //// uncomment below to enable auth page
         // handlePress={() => router.push('/(auth)/sign-in')}
         // comment below to enable auth page
-        handlePress={() => router.push('/(auth)/home')}
+        handlePress={() => router.push('/home')}
       />
     </ImageBackground>
   )
