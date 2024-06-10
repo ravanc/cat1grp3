@@ -13,7 +13,6 @@ const HistoryItem = ({ value, history, setHistory }) => {
       >
       <View className='flex-row items-center'>
         <TouchableOpacity 
-          className='border-2'
           onPress={() => {
             let newHistory = history.filter((item) => item != value);
             setHistory(newHistory);

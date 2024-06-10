@@ -27,7 +27,8 @@ const App = () => {
         text="Start"
         containerStyle="w-[256px] h-[42px] mt-[36px] rounded-lg"
         textStyle="text-lg"
-        handlePress={() => router.push('/(auth)/sign-in')}
+        // handlePress={() => router.push('/(auth)/sign-in')}
+        handlePress={() => router.push('/home')}
       />
     </ImageBackground>
   )
