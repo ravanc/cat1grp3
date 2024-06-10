@@ -35,7 +35,7 @@ const ProductSchema = {
 export const Products = [
   {
     "productId": 1,
-    "productName": "Recycled Plastic Toy Car",
+    "productName": "Eco-Friendly Puzzle",
     "imageSource": "assets/images/products/eco_friendly_puzzle.jpg",
     "ecoRating": 4.9,
     "userRating": 3.7,
@@ -43,78 +43,80 @@ export const Products = [
   },
   {
     "productId": 2,
-    "productName": "Coconut Oil",
-    "imageSource": "assets/images/products/quinoa.jpg",
-    "ecoRating": 1.9,
-    "userRating": 3.4,
-    "category": "food"
-  },
-  {
-    "productId": 3,
-    "productName": "Organic Honey",
-    "imageSource": "assets/images/products/organic_honey.jpg",
-    "ecoRating": 1.4,
-    "userRating": 2.8,
-    "category": "food"
-  },
-  {
-    "productId": 4,
-    "productName": "Hemp Scarf",
-    "imageSource": "assets/images/products/recycled_polyester_handbag.jpg",
-    "ecoRating": 4.3,
-    "userRating": 4.1,
-    "category": "women-fashion"
-  },
-  {
-    "productId": 5,
-    "productName": "Chia Seeds",
-    "imageSource": "assets/images/products/gluten_free_bread.jpg",
-    "ecoRating": 4.6,
-    "userRating": 4.7,
-    "category": "food"
-  },
-  {
-    "productId": 6,
-    "productName": "Organic Cotton T-Shirt",
-    "imageSource": "assets/images/products/organic_cotton_socks.jpg",
-    "ecoRating": 4.0,
-    "userRating": 4.7,
-    "category": "men-fashion"
-  },
-  {
-    "productId": 7,
-    "productName": "Eco-Friendly Necklace",
-    "imageSource": "assets/images/products/eco_friendly_necklace.jpg",
-    "ecoRating": 4.0,
-    "userRating": 3.7,
-    "category": "women-fashion"
-  },
-  {
-    "productId": 8,
-    "productName": "Organic Cotton Blanket",
+    "productName": "Non-Toxic Crayons",
     "imageSource": "assets/images/products/non_toxic_crayons.jpg",
     "ecoRating": 2.6,
     "userRating": 4.7,
     "category": "kids"
   },
   {
-    "productId": 9,
-    "productName": "Organic Cotton T-Shirt",
-    "imageSource": "assets/images/products/organic_cotton_jeans.jpg",
-    "ecoRating": 3.0,
-    "userRating": 1.5,
-    "category": "men-fashion"
-  },
-  {
-    "productId": 10,
-    "productName": "Non-Toxic Crayons",
-    "imageSource": "assets/images/products/bpa_free_baby_bottle.jpg",
-    "ecoRating": 1.7,
-    "userRating": 2.8,
+    "productId": 3,
+    "productName": "Organic Cotton Onesie",
+    "imageSource": "assets/images/products/organic_cotton_onesie.jpg",
+    "ecoRating": 3.9,
+    "userRating": 3.8,
     "category": "kids"
   },
   {
-    "productId": 11,
+    "productId": 4,
+    "productName": "Coconut Oil",
+    "imageSource": "assets/images/products/coconut_oil.jpg",
+    "ecoRating": 1.9,
+    "userRating": 3.4,
+    "category": "food"
+  },
+  {
+    "productId": 5,
+    "productName": "Vegan Protein Bar",
+    "imageSource": "assets/images/products/vegan_protein_bar.jpg",
+    "ecoRating": 2.5,
+    "userRating": 4.0,
+    "category": "food"
+  },
+  {
+    "productId": 6,
+    "productName": "Organic Apple",
+    "imageSource": "assets/images/products/organic_apple.jpg",
+    "ecoRating": 4.8,
+    "userRating": 2.1,
+    "category": "food"
+  },
+  {
+    "productId": 7,
+    "productName": "Polyester Handbag",
+    "imageSource": "assets/images/products/polyester_handbag.jpg",
+    "ecoRating": 3.9,
+    "userRating": 4.1,
+    "category": "women-fashion"
+  },
+  {
+    "productId": 8,
+    "productName": "Eco-Friendly Necklace",
+    "imageSource": "assets/images/products/eco_friendly_necklace.jpg",
+    "ecoRating": 4.5,
+    "userRating": 3.7,
+    "category": "women-fashion"
+  },
+  {
+    "productId": 9,
+    "productName": "Hemp Scarf",
+    "imageSource": "assets/images/products/hemp_scarf.jpg",
+    "ecoRating": 3.1,
+    "userRating": 4.9,
+    "category": "women-fashion"
+  },
+  {
+    "productId": 10,
+    "productName": "Organic Cotton T-Shirt",
+    "imageSource": "assets/images/products/organic_cotton_t_shirt.jpg",
+    "ecoRating": 4.0,
+    "userRating": 4.7,
+    "category": "men-fashion"
+  },
+  
+  
+  {
+    "productId": 7,
     "productName": "Recycled Plastic Vacuum Cleaner",
     "imageSource": "assets/images/products/solar_water_heater.jpg",
     "ecoRating": 2.8,
@@ -122,15 +124,15 @@ export const Products = [
     "category": "home-appliances"
   },
   {
-    "productId": 12,
-    "productName": "Eco-Friendly Watch",
+    "productId": 8,
+    "productName": "Organic Cotton Jeans",
     "imageSource": "assets/images/products/organic_cotton_jeans.jpg",
     "ecoRating": 4.4,
     "userRating": 1.2,
     "category": "men-fashion"
   },
   {
-    "productId": 13,
+    "productId": 9,
     "productName": "Solar Powered Lamp",
     "imageSource": "assets/images/products/solar_powered_lamp.jpg",
     "ecoRating": 5.0,
@@ -138,31 +140,24 @@ export const Products = [
     "category": "home-appliances"
   },
   {
-    "productId": 14,
-    "productName": "Eco-Friendly Blender",
+    "productId": 10,
+    "productName": "Low Energy Washing Machine",
     "imageSource": "assets/images/products/low_energy_washing_machine.jpg",
     "ecoRating": 2.4,
     "userRating": 3.1,
     "category": "home-appliances"
   },
+  
   {
-    "productId": 15,
-    "productName": "Vegan Protein Bar",
-    "imageSource": "assets/images/products/vegan_protein_bar.jpg",
-    "ecoRating": 1.9,
-    "userRating": 4.0,
-    "category": "food"
-  },
-  {
-    "productId": 16,
+    "productId": 12,
     "productName": "Solar Water Heater",
-    "imageSource": "assets/images/products/water_saving_dishwasher.jpg",
-    "ecoRating": 2.4,
+    "imageSource": "assets/images/products/solar_water_heater.jpg",
+    "ecoRating": 4.0,
     "userRating": 3.1,
     "category": "home-appliances"
   },
   {
-    "productId": 17,
+    "productId": 13,
     "productName": "Recycled Plastic Vacuum Cleaner",
     "imageSource": "assets/images/products/eco_friendly_blender.jpg",
     "ecoRating": 3.3,
@@ -217,14 +212,7 @@ export const Products = [
     "userRating": 2.7,
     "category": "food"
   },
-  {
-    "productId": 24,
-    "productName": "Organic Apple",
-    "imageSource": "assets/images/products/vegan_protein_bar.jpg",
-    "ecoRating": 4.8,
-    "userRating": 2.1,
-    "category": "food"
-  },
+  
   {
     "productId": 25,
     "productName": "Energy Star Air Conditioner",
@@ -313,14 +301,7 @@ export const Products = [
     "userRating": 1.0,
     "category": "food"
   },
-  {
-    "productId": 36,
-    "productName": "Bamboo Earrings",
-    "imageSource": "assets/images/products/hemp_scarf.jpg",
-    "ecoRating": 3.5,
-    "userRating": 4.9,
-    "category": "women-fashion"
-  },
+  
   {
     "productId": 37,
     "productName": "Organic Cotton Leggings",
@@ -377,14 +358,7 @@ export const Products = [
     "userRating": 4.4,
     "category": "women-fashion"
   },
-  {
-    "productId": 44,
-    "productName": "Organic Cotton Onesie",
-    "imageSource": "assets/images/products/reusable_cloth_diaper.jpg",
-    "ecoRating": 3.9,
-    "userRating": 3.8,
-    "category": "kids"
-  },
+  
   {
     "productId": 45,
     "productName": "Recycled Plastic Vacuum Cleaner",
