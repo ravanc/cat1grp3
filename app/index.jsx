@@ -1,4 +1,4 @@
-import { View, SafeAreaView, Text, Image, ImageBackground } from 'react-native'
+import { View, SafeAreaView, Text, Image, ImageBackground, StatusBar } from 'react-native'
 import { Redirect, router } from 'expo-router'
 import React from 'react'
 

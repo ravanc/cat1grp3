@@ -24,23 +24,23 @@ const Discover = () => {
       id: 2,
     },
     {
-      category: 'Fashion',
-      title: '10 Latest Sustainability Efforts By Fashion Brands In Asia',
-      image: require('../../assets/images/discover/article-1.png'),
+      category: 'Watchdog',
+      title: 'Latest Findings on GreenCorp',
+      image: require('../../assets/images/discover/article-3.jpg'),
       date: '4 March 2024',
-      duration: '15 min read',
+      duration: '20 min read',
       route: '/article3',
       id: 3,
     },
-    {
-      category: 'Fashion',
-      title: '10 Latest Sustainability Efforts By Fashion Brands In Asia',
-      image: require('../../assets/images/discover/article-1.png'),
-      date: '4 March 2024',
-      duration: '15 min read',
-      route: '/article4',
-      id: 4,
-    }
+    // {
+    //   category: 'Fashion',
+    //   title: '10 Latest Sustainability Efforts By Fashion Brands In Asia',
+    //   image: require('../../assets/images/discover/article-1.png'),
+    //   date: '4 March 2024',
+    //   duration: '15 min read',
+    //   route: '/article4',
+    //   id: 4,
+    // }
   ]
   return (
     <SafeAreaView className='flex items-center h-full bg-white'>

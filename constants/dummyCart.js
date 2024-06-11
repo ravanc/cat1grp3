@@ -1,4 +1,4 @@
-const cart = [
+const userOrders = [
   {
     productId: 22,
     productName: "Polyester Handbag",
@@ -41,4 +41,4 @@ const cart = [
   },
 ];
 
-export default cart;
+export default userOrders;
