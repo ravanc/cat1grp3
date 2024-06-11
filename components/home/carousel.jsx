@@ -39,7 +39,7 @@ const Carousel = () => {
   // render images & text
   const renderItem = ({ item, index }) => {
     return (
-      <View className='mt-3' style={{ width: screenWidth}}>
+      <View key={index} className='mt-3' style={{ width: screenWidth}}>
         <View className='flex items-start ml-10 drop-shadow-2xl rounded-lg overflow-hidden' style={{width: Dimensions.get('screen').width*0.8}}>
           <Image source={item.image} className='object-contain'/>
           <View className='flex-row items-center w-full bg-white'>
@@ -65,6 +65,7 @@ const Carousel = () => {
         if (activeIndex == index) {
           return (
             <View
+              key={index}
               className='bg-[#49824E] h-[10px] w-[10px] rounded-full'
             >
             </View>
