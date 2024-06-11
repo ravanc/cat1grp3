@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Modal, TouchableOpacity, ScrollView, Dimensions, Image } from 'react-native'
+import { View, Text, SafeAreaView, Modal, TouchableOpacity, ScrollView, Dimensions, Image, Alert } from 'react-native'
 import { useLocalSearchParams } from 'expo-router';
 import React, { useState } from 'react'
 import { router } from 'expo-router';
@@ -107,14 +107,13 @@ const ProductDescription = () => {
                 text={'Add to Cart'}
                 containerStyle={'self-end mt-auto  py-2 px-4 rounded-lg'}
                 textStyle={'text-lg'}
-                handlePress={() => openModal()}
+                handlePress={() => {
+                  closeModal()
+                  Alert.alert('Item added to cart!')
+                }}
               />
             </View>
-
           </View>
-
-
-
         </View>
       </Modal>
     </SafeAreaView>
