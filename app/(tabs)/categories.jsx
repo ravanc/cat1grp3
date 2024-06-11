@@ -74,6 +74,7 @@ const Categories = () => {
                 merchantName={item.merchantName}
                 ecoRating={item.ecoRating}
                 userRating={item.userRating}
+                price={item.productPrice}
                 key={item.productId}
                 styles={'w-[50%] mb-4 items-center'}
               />)

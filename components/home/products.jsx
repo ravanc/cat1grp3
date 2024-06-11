@@ -26,6 +26,7 @@ const ProductsList = () => {
               merchantName={item.merchantName}
               ecoRating={item.ecoRating}
               userRating={item.userRating}
+              price={item.productPrice}
               key={index}
             />
           </View>
