@@ -21,7 +21,7 @@ const Home = () => {
       <View className='mt-6'>
         <Carousel/>
       </View>
-      <View className='flex-row ml-7 mt-8'>
+      <View className='flex-row pl-7 mt-8'>
         <Text className='font-psemibold text-lg'>Popular</Text>
         <TouchableOpacity className='ml-auto mr-5 bg-primary rounded-full w-[60px] justify-center'>
           <Text 

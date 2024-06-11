@@ -14,27 +14,26 @@ const ProductsList = () => {
   }, [])
 
   return (
-    <View className='ml-4 mt-3'>
-      <FlatList
+    <FlatList
+      className='pl-4 mt-3'
         data={productList}
         renderItem={({item, index}) => {
           return (
-            <View className='mx-2'>
-              <Listing 
-                source={item.imageSource}
-                productName={item.productName}
-                merchantName={item.merchantName}
-                ecoRating={item.ecoRating}
-                userRating={item.userRating}
-                key={index}
-              />
-            </View>
-          )
-        }}
-        horizontal={true}
-        showsHorizontalScrollIndicator={false}
-      />
-    </View>
+          <View className='px-2'>
+            <Listing 
+              source={item.imageSource}
+              productName={item.productName}
+              merchantName={item.merchantName}
+              ecoRating={item.ecoRating}
+              userRating={item.userRating}
+              key={index}
+            />
+          </View>
+        )
+      }}
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+    />
   )
 }
 

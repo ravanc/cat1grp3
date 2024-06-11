@@ -19,11 +19,11 @@ const App = () => {
           resizeMode='contain'
         />
       </View>
-      <Text className='color-white mt-[36px] text-lg'>Shop sustainably with EcoPick</Text>
+      <Text className='color-white mt-[48px] text-lg font-pbold'>Shop sustainably with EcoPick</Text>
       <CustomButton 
         text="Start"
-        containerStyle="w-[256px] h-[42px] mt-[36px] rounded-lg"
-        textStyle="text-lg"
+        containerStyle="w-[256px] h-[42px] mt-[28px] rounded-lg"
+        textStyle="text-lg font-pregular"
         //// uncomment below to enable auth page
         // handlePress={() => router.push('/(auth)/sign-in')}
         // comment below to enable auth page

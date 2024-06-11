@@ -36,7 +36,7 @@ const Categories = () => {
         </TouchableHighlight>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View className='border-b-[1px] border-[#BBBBBB] py-2'>
+        <View className='border-b-[1px] border-[#BBBBBB] py-2 pt-5'>
           <CategoryList categories={CATEGORIES} isSelected={categorySelected} setIsSelected={setCategorySelected} setSortBy={setSortBy}/>
         </View>
 
@@ -75,7 +75,7 @@ const Categories = () => {
                 ecoRating={item.ecoRating}
                 userRating={item.userRating}
                 key={item.productId}
-                styles={'ml-12 mb-4'}
+                styles={'w-[50%] mb-4 items-center'}
               />)
             }
           </View>

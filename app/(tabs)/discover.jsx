@@ -1,4 +1,4 @@
-import { View, Image, TouchableOpacity, FlatList, SafeAreaView } from 'react-native'
+import { View, Image, TouchableOpacity, FlatList, SafeAreaView, Text } from 'react-native'
 import React from 'react'
 import SearchBar from '../../components/discover/searchbar'
 import ArticleCard from '../../components/discover/article-card'
@@ -32,18 +32,10 @@ const Discover = () => {
       route: '/article3',
       id: 3,
     },
-    // {
-    //   category: 'Fashion',
-    //   title: '10 Latest Sustainability Efforts By Fashion Brands In Asia',
-    //   image: require('../../assets/images/discover/article-1.png'),
-    //   date: '4 March 2024',
-    //   duration: '15 min read',
-    //   route: '/article4',
-    //   id: 4,
-    // }
   ]
   return (
     <SafeAreaView className='flex items-center h-full bg-white'>
+      <View className='self-start pt-4 pb-2'><Text className='font-psemibold text-xl ml-5'>Discover</Text></View>
       <View className='flex-row items-center mb-2'>
         <SearchBar/>
         <TouchableOpacity onPress={() => {console.log('go to bookmarks')}} activeOpacity={0.9}>
