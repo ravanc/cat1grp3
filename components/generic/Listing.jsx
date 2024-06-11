@@ -32,9 +32,9 @@ const Listing = ({source, productName, merchantName, ecoRating, userRating, styl
             <Text className='font-plight w-[78px]' numberOfLines={1}>{merchantName}</Text>
             <View className='ml-auto flex-row items-center'>
               <Image source={require('../../assets/images/general/leaf-green.png')} className='h-[10px] w-[10px] mr-[2px]' />
-              <Text className='font-plight mr-[2px]'>{ecoRating}</Text>
+              <Text className='font-plight mr-[2px]'>{ecoRating.toFixed(1)}</Text>
               <Image source={require('../../assets/images/general/star-yellow.png')} className='h-[12px] w-[12px] mr-[2px]'/>
-              <Text className='font-plight'>{userRating}</Text>
+              <Text className='font-plight'>{userRating.toFixed(1)}</Text>
             </View>
           </View>
         </TouchableOpacity>

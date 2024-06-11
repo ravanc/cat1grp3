@@ -37,8 +37,9 @@ const Categories = () => {
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View className='border-b-[1px] border-[#BBBBBB] py-2'>
-          <CategoryList categories={CATEGORIES} isSelected={categorySelected} setIsSelected={setCategorySelected}/>
+          <CategoryList categories={CATEGORIES} isSelected={categorySelected} setIsSelected={setCategorySelected} setSortBy={setSortBy}/>
         </View>
+
 
         <View>
           <Text className='font-psemibold text-2xl mt-3 ml-4'>{(CATEGORIES.find((category) => category.id == categorySelected)).name}</Text>
