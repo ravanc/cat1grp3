@@ -1,7 +1,5 @@
 import { View, Text, SafeAreaView, ScrollView, TouchableHighlight, Image, TouchableOpacity, FlatList } from 'react-native'
 import React from 'react'
-import { useState, useEffect } from 'react'
-import { router } from 'expo-router'
 
 import Listing from '../../components/generic/Listing'
 import CategoryList from '../../components/categories/CategoryList'
@@ -10,22 +8,8 @@ import CATEGORIES from '../../constants/categories'
 import { searchByCategory } from '../../lib/services'
 import { useState, useEffect } from 'react'
 import { router } from 'expo-router'
-
-import Listing from '../../components/generic/Listing'
-import CategoryList from '../../components/categories/CategoryList'
-import CustomButton from '../../components/generic/CustomButton'
-import CATEGORIES from '../../constants/categories'
-import { searchByCategory } from '../../lib/services'
 
 const Categories = () => {
-  const [categorySelected, setCategorySelected] = useState('food');
-  const [sortBy, setSortBy] = useState('ecoRating');
-  const [listings, setListings] = useState([]);
-
-  useEffect(() => {
-    setListings(searchByCategory(categorySelected));
-  }, [categorySelected])
-
 
   const [categorySelected, setCategorySelected] = useState('food');
   const [sortBy, setSortBy] = useState('ecoRating');
