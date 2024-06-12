@@ -4,6 +4,8 @@ import { Tabs, router, useLocalSearchParams } from 'expo-router'
 import SearchBar from '../../components/store/SearchBar'
 import { NavigationContainer } from '@react-navigation/native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
+import { useState } from 'react'
+
 import AboutScreen from '../../components/store/AboutScreen'
 import ProductsScreen from '../../components/store/ProductsScreen'
 
@@ -12,22 +14,26 @@ const Tab = createMaterialTopTabNavigator();
 const Store = () => {
     const { store, source, productName, merchantName, ecoRating, userRating } = useLocalSearchParams();
     
+    let keyGen = 0;
+      
+      
       
     const generateLeaves = () => {
       const arr = [];
         let remainderEcoRating = 5
         for (let i = 0; i < Math.floor(ecoRating); i++) {
             arr.push(
-                <Image source={require('../../assets/images/general/leaf-green-large.png')} className='ml-[1px]'/>
+                <Image key={keyGen} source={require('../../assets/images/general/leaf-green-large.png')} className='ml-[1px]'/>
             );
             remainderEcoRating -= 1;
+            keyGen += 1
 
         }
         for (let i = 0; i < remainderEcoRating; i++) {
             arr.push(
-                <Image source={require('../../assets/images/general/leaf-grey.png')} className='ml-[1px]'/>
+                <Image key={keyGen} source={require('../../assets/images/general/leaf-grey.png')} className='ml-[1px]'/>
             );
-
+            keyGen += 1
         }
         return arr;
     }
@@ -37,16 +43,16 @@ const Store = () => {
         let remainderUserRating = 5
         for (let n = 0; n < Math.floor(userRating); n++) {
             arr.push(
-                <Image source={require('../../assets/images/store-page/star-yellow.png')}/>
+                <Image key={keyGen} source={require('../../assets/images/store-page/star-yellow.png')}/>
             );
             remainderUserRating -= 1;
-
+            keyGen += 1
         }
         for (let i = 0; i < remainderUserRating; i++) {
             arr.push(
-                <Image source={require('../../assets/images/store-page/star-grey.png')}/>
+                <Image key={keyGen} source={require('../../assets/images/store-page/star-grey.png')}/>
             );
-
+            keyGen += 1
         }
         return arr;
     }

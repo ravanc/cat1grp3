@@ -2,7 +2,7 @@ import { View, Image, TouchableOpacity, FlatList, SafeAreaView } from 'react-nat
 import React from 'react'
 import SearchBar from '../../components/discover/searchbar'
 import ArticleCard from '../../components/discover/article-card'
-import { Stack, router } from 'expo-router'
+import { router } from 'expo-router'
 
 import ARTICLES from '../../constants/articles'
 

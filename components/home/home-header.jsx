@@ -9,7 +9,7 @@ const HomeHeader = () => {
       <Image source={require('../../assets/images/home/demo-user.png')}/>
       <View className='flex-col pl-3'>
         <Text className='font-psemibold text-lg'>Welcome, Jason!</Text>
-        <Text className='font-pregular font-xs mb-1'>Rank: <Text className='font-psemibold font-xs text-primary'>Seedling</Text></Text>
+        <Text className='font-pregular font-xs mb-1'>Level: <Text className='font-psemibold font-xs text-primary'>Seedling</Text></Text>
         <ProgressBar/>
       </View>
       <View className='flex-row gap-2 ml-auto mr-5'>
