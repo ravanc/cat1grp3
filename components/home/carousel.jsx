@@ -52,6 +52,12 @@ const Carousel = () => {
               <Image source={require('../../assets/images/general/leaf-green.png')} className='w-[13px] h-[13px]'/>
               <Image source={require('../../assets/images/general/leaf-grey.png')} className='w-[13px] h-[13px]'/>
               <Image source={require('../../assets/images/general/leaf-grey.png')} className='w-[13px] h-[13px]'/>
+            <View className='flex-row gap-1 ml-auto mr-2'>
+              <Image source={require('../../assets/images/general/leaf-green.png')} className='w-[13px] h-[13px]' />
+              <Image source={require('../../assets/images/general/leaf-green.png')} className='w-[13px] h-[13px]'/>
+              <Image source={require('../../assets/images/general/leaf-green.png')} className='w-[13px] h-[13px]'/>
+              <Image source={require('../../assets/images/general/leaf-grey.png')} className='w-[13px] h-[13px]'/>
+              <Image source={require('../../assets/images/general/leaf-grey.png')} className='w-[13px] h-[13px]'/>
             </View>
           </View>
         </View>
@@ -66,6 +72,7 @@ const Carousel = () => {
         if (activeIndex == index) {
           return (
             <View
+              key={index}
               key={index}
               className='bg-[#49824E] h-[10px] w-[10px] rounded-full'
             >

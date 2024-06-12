@@ -1,8 +1,10 @@
 import { View, Text, Image, TouchableOpacity, TouchableHighlight } from 'react-native'
+import { View, Text, Image, TouchableOpacity, TouchableHighlight } from 'react-native'
 import React from 'react'
 import ArticleTag from './article-tag'
 import { useState } from 'react';
 
+const ArticleCard = ({ category, title, image, date, duration, route }) => {
 const ArticleCard = ({ category, title, image, date, duration, route }) => {
     const [isBookmarked, setIsBookmarked] = useState(false);
 
