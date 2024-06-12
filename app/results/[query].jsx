@@ -59,7 +59,8 @@ const Search = () => {
               source={item.imageSource}
               ecoRating={item.ecoRating}
               userRating={item.userRating}
-              styles={'ml-12 mb-2'}
+              price={item.productPrice}
+              styles={'w-[50%] mb-4 items-center'}
               key={index}
             />
           ) }
