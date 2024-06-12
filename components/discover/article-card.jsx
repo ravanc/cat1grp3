@@ -7,12 +7,12 @@ const ArticleCard = ({ category, title, image, date, duration, route }) => {
     const [isBookmarked, setIsBookmarked] = useState(false);
 
   return (
-    <TouchableHighlight
-      onPress={() => console.log('push to', route)}
-      className='h-auto w-[85vw] rounded-3xl overflow-hidden mb-5 border-[#dedddd] border-2'
-      underlayColor={'#DDDDDD'}
-      activeOpacity={0.9}
-    >
+    // <TouchableHighlight
+    //   onPress={() => console.log('push to', route)}
+    //   className='h-auto w-[85vw] rounded-3xl overflow-hidden mb-5 border-[#dedddd] border-2'
+    //   underlayColor={'#DDDDDD'}
+    //   activeOpacity={0.9}
+    // >
       <View>
       <Image source={image} className='h-40 w-full '/>
       <View className='flex-column h-auto px-3 py-2'>
@@ -31,7 +31,7 @@ const ArticleCard = ({ category, title, image, date, duration, route }) => {
         </View>
       </View>
       </View>  
-    </TouchableHighlight>
+    // </TouchableHighlight>
   )
 }
 
