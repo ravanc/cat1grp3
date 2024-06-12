@@ -1,11 +1,33 @@
 import { View, Text, Image, TouchableOpacity, TouchableHighlight } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import ArticleTag from './article-tag'
 import { useState } from 'react';
 
-const ArticleCard = ({ category, title, image, date, duration, route }) => {
-    const [isBookmarked, setIsBookmarked] = useState(false);
+const ArticleCard = ({ id, category, title, image, date, duration, bookmarked, setBookmarked }) => {
+  const [isBookmarked, setIsBookmarked] = useState(false);
 
+  const addArticle = () => {
+    setBookmarked([...bookmarked, id]);
+  };
+
+  const deleteArticle = () => {
+    const newBookmarkList = bookmarked.filter((itemId) => 
+        itemId != id
+    );
+    setBookmarked(newBookmarkList);
+  };  
+
+  useEffect(() => {
+
+      if (isBookmarked) {
+        addArticle()
+      } else if (!isBookmarked) {
+        deleteArticle()
+      }
+    }, [isBookmarked]);
+  
+  
+    
   return (
 
     <View className='h-auto w-[85vw] rounded-3xl overflow-hidden mb-5 border-[#dedddd] border-2'>
@@ -14,7 +36,12 @@ const ArticleCard = ({ category, title, image, date, duration, route }) => {
         <View className='flex-row items-center'>
         <ArticleTag category={category}/>
         <View className='ml-auto'>
-          <TouchableOpacity onPress={() => {setIsBookmarked(!isBookmarked)}} activeOpacity={0.9}>
+          <TouchableOpacity 
+            onPress={() => 
+              setIsBookmarked(!isBookmarked)
+            } 
+            activeOpacity={0.9}
+          >
             <Image source={!isBookmarked ? require('../../assets/images/discover/bookmark-blank.png') : require('../../assets/images/discover/bookmark2.png')}/>
           </TouchableOpacity>
         </View>

@@ -34,6 +34,7 @@ export default function RootLayout() {
         <Stack.Screen name="product/[product]" options={{ headerShown: false }} />
         <Stack.Screen name="store/[store]" options={{ headerShown: false }} />
         <Stack.Screen name="article-page/[page]" options={{ headerShown: false }} />
+        <Stack.Screen name="bookmarks/bookmarks" options={{ headerShown: false }} />
       </Stack>
   );
 }
