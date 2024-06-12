@@ -22,7 +22,7 @@ const Profile = () => {
 
         <View className='mt-4'>
           <CircularProgressBase 
-            value={40} 
+            value={60} 
             radius={150} 
             activeStrokeWidth={20} 
             inActiveStrokeWidth={20} 
@@ -44,13 +44,18 @@ const Profile = () => {
         <View className='flex-row justify-evenly items-center bg-white w-[330px] h-[110px] rounded-2xl border-solid border-4 border-[#A9CBAC] mt-5'>
           <ProfileButton
             source={require('../../assets/images/profile/order-progress.png')}
+            route='/(order)/progress'
+            action='push'
           />
           <ProfileButton
             source={require('../../assets/images/profile/order-history.png')}
+            route='/(order)/history'
+            action='push'
           />
           <ProfileButton
             source={require('../../assets/images/profile/logout.png')}
             route='../(auth)/sign-in'
+            action='replace'
           />
         </View>
       </View>
