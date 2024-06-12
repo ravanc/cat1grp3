@@ -43,24 +43,27 @@ const ProductDescription = () => {
       <ScrollView className='mt-2'>
         <ImageCarousel />
         <View className='px-6 py-4'>
-          <Text className='text-xl font-psemibold'>{ product }</Text>
-          <Text className='text-lg font-pmedium'>${ price } <Text className='font-plight text-sm text-[#EF4444]'>Get 80% off with vouchers applied!</Text></Text>
-          <Text className='font-plight'>{ merchantName }</Text>
-          <Text className="italic text-primary">This brand uses sustainable packaging</Text>
+          <Text className='text-xl font-psemibold mt-1'>{ product }</Text>
+          <Text className='text-lg font-pmedium mt-1'>${ Number(price).toFixed(2) } <Text className='font-plight text-sm text-[#EF4444]'>Get 80% off with vouchers applied!</Text></Text>
           <View className='flex-row items-center mb-2 mt-1'>
-            <Image source={require('../../assets/images/general/leaf-green.png')} className='h-[10px] w-[10px] mr-[2px]' />
-            <Text className='font-plight mr-[2px]'>{ ecoRating }</Text>
-            <Image source={require('../../assets/images/general/star-yellow.png')} className='h-[12px] w-[12px] mr-[2px]'/>
-            <Text className='font-plight'>{ userRating }</Text>
+            <Image source={require('../../assets/images/general/leaf-green.png')} className='h-[10px] w-[10px] mr-[4px]' />
+            <Text className='font-plight mr-[8px]'>{ Number(ecoRating).toFixed(1) }</Text>
+            <Image source={require('../../assets/images/general/star-yellow.png')} className='h-[12px] w-[12px] mr-[4px]'/>
+            <Text className='font-plight'>{ Number(userRating).toFixed(1) }</Text>
           </View>
+          <View className='flex-row items-center mt-1'>
+            <Image source={require('../../assets/images/product-description/store-profile.png')} />
+            <Text className='font-plight ml-2'>{ merchantName }</Text>
+          </View>
+          <Text className="italic text-primary mt-1">This brand uses sustainable packaging</Text>
           <Text className='text-lg font-pmedium mt-2'>Product Description</Text>
-          <Text className='font-plight leading-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates necessitatibus quaerat harum ea minus odit doloremque. Sapiente a sequi placeat, veniam sit laboriosam vitae facere quidem reprehenderit, obcaecati officiis praesentium! {'\n'}{'\n'}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veritatis maiores deleniti eligendi quos, dolorum, mollitia harum molestias libero quasi magni. Aliquam id iusto minus? Eveniet distinctio qui est eius?</Text>
+          <Text className='font-plight leading-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates necessitatibus quaerat harum ea minus odit doloremque. Sapiente a sequi placeat, veniam sit laboriosam vitae facere quidem reprehenderit, obcaecati officiis praesentium! {'\n'}{'\n'}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veritatis maiores deleniti eligendi quos, dolorum, mollitia harum molestias libero quasi magni. Aliquam id iusto minus? Eveniet distinctio qui est eius?</Text>
           <View className='self-center bg-[#D0FFD5] rounded-2xl py-3 px-4 mt-6'>
             <View className='flex-row items-center'>
               <Image source={require('../../assets/images/product-description/leaf-big.png')} />
               <Text className='text-lg ml-3 font-pregular'>Sustainability Efforts</Text>
             </View>
-            <Text className='font-plight'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem quae, molestias quas fugit ex veritatis atque praesentium totam provident illo nostrum eius dolorem ad animi incidunt doloremque quidem, porro tempore!</Text>
+            <Text className='mt-1 font-plight leading-6'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem quae, molestias quas fugit ex veritatis atque praesentium totam provident illo nostrum eius dolorem ad animi incidunt doloremque quidem, porro tempore!</Text>
           </View>
         </View>  
       </ScrollView>
@@ -70,7 +73,12 @@ const ProductDescription = () => {
           text={'Go to Shop'}
           containerStyle={'flex-1 py-2 px-4 bg-[#E8E8E8] h-16'}
           textStyle={'text-lg text-primary'}
-          handlePress={() => {}}
+          handlePress={() => {
+          router.push({
+            pathname: `/store/${merchantName}`,
+            params: {source:`${source}`, productName:`${product}`, merchantName:`${merchantName}`, ecoRating:`${ecoRating}`, userRating:`${userRating}`}          
+          }) 
+          }}
         />
         <CustomButton 
           text={'Add to Cart'}
