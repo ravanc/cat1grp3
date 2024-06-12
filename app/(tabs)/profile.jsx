@@ -14,7 +14,7 @@ const Profile = () => {
 
       <View className='flex-none items-center'>
         <View className='flex-none items-center'>
-          <Text className='mt-4'>Your Rank:</Text>
+          <Text className='mt-4'>Your Level:</Text>
           <View className='flex-none justify-center items-center w-[170px] h-[46px] rounded-[50%] border-[1px] border-solid border-[#AAAAAA] mt-2'>
             <Text className='text-[#49824E] font-bold text-2xl'>Seedling</Text>
           </View>
