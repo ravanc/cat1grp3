@@ -1,0 +1,42 @@
+export default ARTICLES = [
+  {
+    id: 1,
+    category: 'Fashion',
+    title: '10 Latest Sustainability Efforts By Fashion Brands In Asia',
+    image: require('../assets/images/discover/article-1.png'),
+    author: 'Sarah Lim',
+    authorImg: require('../assets/images/discover/author.png'),
+    date: '4 March 2024',
+    duration: '15 min read',
+  },
+  {
+    id: 2,
+    category: 'Shopping',
+    title: '5 Tips On How To Save While Shopping Sustainably',
+    image: require('../assets/images/discover/article-2.png'),
+    author: 'Sarah Lim',
+    authorImg: require('../assets/images/discover/author.png'),
+    date: '4 March 2024',
+    duration: '10 min read',
+  },
+  {
+    id: 3,
+    category: 'Others',
+    title: 'What Is Greenwashing, And How Do You Spot It?',
+    image: require('../assets/images/discover/article-1.png'),
+    author: 'Sarah Lim',
+    authorImg: require('../assets/images/discover/author.png'),
+    date: '4 March 2024',
+    duration: '15 min read',
+  },
+  {
+    id: 4,
+    category: 'Others',
+    title: 'Sustainability Trends: 5 Issues To Watch In 2024',
+    image: require('../assets/images/discover/article-1.png'),
+    author: 'Sarah Lim',
+    authorImg: require('../assets/images/discover/author.png'),
+    date: '4 March 2024',
+    duration: '15 min read',
+  }
+]

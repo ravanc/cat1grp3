@@ -22,15 +22,18 @@ const Profile = () => {
 
         <View className='mt-4'>
           <CircularProgressBase 
-            value={50} 
+            value={40} 
             radius={150} 
             activeStrokeWidth={20} 
             inActiveStrokeWidth={20} 
             activeStrokeColor={'#49824E'} 
             inActiveStrokeColor={'#DFE9E0'}
           >
-            <View className='w-[264] h-[264] rounded-full bg-[#B0FFB7]' />
-            <Image source={require('../../assets/images/profile/seedling.png')} className='w-[100px] h-[100px] absolute' />
+            <Image className='w-[264] h-[264] rounded-full bg-[#B0FFB7]' source={require('../../assets/images/profile/radial-gradient.png')}/>
+            <View className='absolute flex-none items-center'>
+              <Image source={require('../../assets/images/profile/seedling.png')} className='w-[100px] h-[100px]' />
+              <Text className='mt-2 text-[14px] font-pregular'><Text className='text-[40px] font-psemibold'>600</Text> /1000*</Text>
+            </View>
           </CircularProgressBase>
         </View>
 

@@ -1,19 +1,19 @@
-import { View, Text, Image, TouchableOpacity, FlatList, ScrollView } from 'react-native'
-import React, { useState } from 'react'
+import { View, Image, TouchableOpacity, FlatList, SafeAreaView } from 'react-native'
+import React from 'react'
 import SearchBar from '../../components/discover/searchbar'
 import ArticleCard from '../../components/discover/article-card'
 import { Stack, router } from 'expo-router'
 
-import ARTICLES from '../../constants/Articles'
+import ARTICLES from '../../constants/articles'
 
 
 const Discover = () => {
   
   return (
-    <View className='flex items-center mt-14'>
-      <View className='flex-row items-center mb-5'>
+    <SafeAreaView className='flex items-center h-full bg-white'>
+      <View className='flex-row items-center mb-2'>
         <SearchBar/>
-        <TouchableOpacity onPress={() => {console.log('go to bookmarks')}}>
+        <TouchableOpacity onPress={() => {console.log('go to bookmarks')}} activeOpacity={0.9}>
           <Image source={require('../../assets/images/discover/bookmark-blank.png')} className='ml-3'/>
         </TouchableOpacity>
       </View>
@@ -44,9 +44,7 @@ const Discover = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{paddingTop: 10, paddingBottom: 70}}
       />
-      
-      <ArticleCard/>
-    </View>
+    </SafeAreaView>
   )
 }
 

@@ -1,7 +1,8 @@
 import { View, Text, Image, TouchableHighlight } from 'react-native'
 import React from 'react'
+import { router } from 'expo-router'
 
-const ProfileHeader = ({ avatarSource, name }) => {
+const ProfileHeader = () => {
   return (
     <View className='flex-row items-center border-b-2 border-[#CCCCCC] py-3'>
       <Image source={require('../../assets/images/profile/demo-user.png')} className='ml-5' />
@@ -10,8 +11,8 @@ const ProfileHeader = ({ avatarSource, name }) => {
         <TouchableHighlight
           activeOpacity={0.8}
           underlayColor={'#BBBBBB'}
-          onPress={() => {}}
-          style={{borderRadius: '50%', width: '16px'}}
+          onPress={() => { router.push('./../cart/cart') }}
+          style={{borderRadius: 50, width: '16px'}}
         >
           <View className='flex-none justify-center items-center'>
             <View className='rounded-full bg-[#E4FFE6] w-[32px] h-[32px]' />
@@ -23,7 +24,7 @@ const ProfileHeader = ({ avatarSource, name }) => {
           activeOpacity={0.8}
           underlayColor={'#BBBBBB'}
           onPress={() => {}}
-          style={{borderRadius: '50%', width: '16px'}}
+          style={{borderRadius: 50, width: '16px'}}
         >
           <View className='flex-none justify-center items-center'>
           <View className='rounded-full bg-[#E4FFE6] w-[32px] h-[32px]' />
